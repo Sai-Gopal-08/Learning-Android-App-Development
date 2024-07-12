@@ -14,7 +14,7 @@
         - You might use [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html) or [Kotlin](https://kotlinlang.org) to create UI elements imperatively, specifying each element’s properties and how they should be displayed.
         ```Kotlin
             // Imperative Approach (Traditional Android UI)
-            val button = Button(context)
+            val button:Button = findViewById(R.id.button)
             button.text = "Click me"
             button.setOnClickListener {
             // Do something when the button is clicked
@@ -55,7 +55,7 @@
 ### App components
  - App components are the essential building blocks of an Android app. 
  - Each component is an entry point through which the system or a user can enter your app. Some components depend on others.
- - There are five different types of app components each serving a distinct purpose with a distinct life cycle which defines how it is created and destroyed. They include:
+ - App components:
     ---
 
     1. Activities:
