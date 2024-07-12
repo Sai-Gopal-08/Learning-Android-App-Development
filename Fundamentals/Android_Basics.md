@@ -72,10 +72,16 @@
     
     5. Activating components:
         * An asynchronous message called an intent activates three of the four component types: activities, services, and broadcast receivers.    
+    ---
 
-
----
-
+### Terminology - Asynchronous, Tasks, ANR, Crashes
+ - A **task** is a collection of activities that users interact with when trying to do something in your app. These activities are arranged in a stack called the *back stack* in the order in which each activity is opened.
+ - An Android app *crashes* whenever there’s an unexpected exit caused by an unhandled exception or signal. When an app crashes, Android terminates the app's process and displays a dialog to let the user know that the app has stopped.
+ - When the UI thread of an Android app is blocked for too long, an **Application Not Responding** (ANR) error is triggered. ANRs are a problem because the app's main thread, which is responsible for updating the UI, can't process user input events or draw, causing frustration to the user.
+ - **Asynchronous** work is the second component of background work, alongside persistent work. 
+    - While both persistent and asynchronous work take place in the background, they are ultimately quite different. 
+    - In kotlin you can use **Coroutines**, while in java you can use **Threads**.
+ 
  
  [//]: # (Reference used)
  [wiki]: <https://en.wikipedia.org/wiki/Android_(operating_system)>
