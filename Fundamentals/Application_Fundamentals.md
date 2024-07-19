@@ -89,6 +89,48 @@
 - **State Restoration**:
   - Helps the app handle process termination and restore the previous state when the user returns.
 
+### Services in Android
+
+#### Definition and Purpose
+- **General-Purpose Entry Point**:
+  - Keeps an app running in the background for various reasons.
+  - Performs long-running operations or work for remote processes.
+  - Does not provide a user interface.
+
+#### Examples
+- **Background Music**:
+  - A service might play music in the background while the user is in a different app.
+- **Data Fetching**:
+  - A service might fetch data over the network without blocking user interaction with an activity.
+
+#### Types of Services
+- **Started Services**:
+  - Tell the system to keep them running until their work is completed.
+  - Examples include syncing data in the background or playing music.
+  - **Music Playback**:
+    - User is directly aware of it.
+    - App indicates it wants to be in the foreground with a notification.
+    - System prioritizes keeping the service’s process running to avoid a bad user experience.
+  - **Regular Sync Background Service**:
+    - User is not directly aware of it.
+    - System has more freedom in managing its process.
+    - Might be killed and restarted later if the system needs RAM for more immediate concerns.
+
+- **Bound Services**:
+  - Run because another app (or the system) wants to use the service.
+  - Provide an API to another process.
+  - System keeps the service’s process running because of the dependency.
+  - If a bound service is used by a process that the user cares about, the system treats the service’s process as important as well.
+
+#### Flexibility and Use Cases
+- **Useful Building Blocks**:
+  - Services are used for higher-level system concepts like live wallpapers, notification listeners, screen savers, input methods, and accessibility services.
+  - Core system features are built as services that applications implement and the system binds to when they run.
+
+#### Implementation
+  - Developers can implement a service as a subclass of `Service`.
+  - For more information, refer to the [Services overview](https://developer.android.com/guide/components/services).
+
 
 
 
