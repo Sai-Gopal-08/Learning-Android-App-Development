@@ -3,7 +3,6 @@ package com.gopal.material3_compose_components.basic_components
 import androidx.compose.foundation.interaction.DragInteraction
 import androidx.compose.foundation.interaction.FocusInteraction
 import androidx.compose.foundation.interaction.HoverInteraction
-import androidx.compose.foundation.interaction.Interaction
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Arrangement
@@ -28,7 +27,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.ImeAction
@@ -37,16 +35,23 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.PlatformImeOptions
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.gopal.material3_compose_components.util.basicLayoutItem
 import kotlinx.coroutines.flow.collectLatest
+
+@Preview
+@Composable
+private fun TextFieldComposables_Prev() {
+    TextFieldComposables()
+}
 
 @Composable
 fun TextFieldComposables(
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.Top)
@@ -365,6 +370,4 @@ fun TextFieldComposables(
         }
 
     }
-
-
 }
