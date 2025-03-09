@@ -2,6 +2,7 @@ package com.gopal.material3_compose_components.basic_components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,6 +13,7 @@ import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material3.Badge
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
@@ -129,6 +131,19 @@ fun ButtonComposable_Usages_Examples() {
                 enabled = false
             ) {
                 Text(text = "Button with disabled state")
+            }
+
+            Box {
+                Button(
+                    onClick = {}
+                ) {
+                    Text(text = "Button with badge")
+                }
+                Badge(
+                    modifier = Modifier.align(alignment = Alignment.TopEnd)
+                ) {
+                    Text(text = "3")
+                }
             }
         }
 
