@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Material3_Compose_Components</string>
+    <string name="edit_icon_description">Edit icon</string>
+    <string name="edit">Edit</string>
 </resources>
