@@ -46,6 +46,7 @@ fun CardComposable() {
             .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.Top)
     ) {
+        // bank card composable: https://medium.com/deuk/intermediate-android-compose-bank-card-ui-371d14ea7843
 
         basicLayoutItem {
             // basic card
